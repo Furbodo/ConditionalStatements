@@ -9,6 +9,7 @@
 using namespace std;
 void main()
 {
+	int caseTester;
 	short earnedPTS; // points the student earned this semester
 	char letterGrade; // assigned value for letter grade
 	cout << setprecision(4) << fixed << showpoint; // output flags, stole this from last project too :)
@@ -16,39 +17,33 @@ void main()
 
 	if (earnedPTS >= 951 && earnedPTS <= 1100) {
 		letterGrade = 65; // A
+		caseTester = 1;
 	}
 	else if (earnedPTS >= 801 && earnedPTS <= 950) {
 		letterGrade = 66; // B
+		caseTester = 1;
 	}
 	else if(earnedPTS >= 651 && earnedPTS <= 800) {
-		letterGrade = 67; // C		
+		letterGrade = 67; // C
+		caseTester = 1;
 	}
 	else if(earnedPTS >= 501 && earnedPTS <= 650) {
 		letterGrade = 68; // D
+		caseTester = 1;
 	}
 	else if (earnedPTS >= 0 && earnedPTS <= 500) {
 		letterGrade = 70; // F
+		caseTester = 1;
 	}
 	else {
-		letterGrade = 0; // Incase we get a number outside the range, we still have to assign a value to letterGrade the way this is written
+		letterGrade = 0;
+		caseTester = 0; // Incase we get a number outside the range, we still have to assign a value to letterGrade the way this is written
 
 	}
 
-	switch (letterGrade)
+	switch (caseTester) // This switch statement
 	{
-		case 65: 
-			cout << "The student earned a letter grade of " << letterGrade << endl;
-			break;
-		case 66:
-			cout << "The student earned a letter grade of " << letterGrade << endl;
-			break;
-		case 67:
-			cout << "The student earned a letter grade of " << letterGrade << endl;
-			break;
-		case 68:
-			cout << "The student earned a letter grade of " << letterGrade << endl;
-			break;
-		case 70:
+		case 1: 
 			cout << "The student earned a letter grade of " << letterGrade << endl;
 			break;
 		default:
